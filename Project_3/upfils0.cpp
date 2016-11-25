@@ -233,7 +233,7 @@ updatfil( const char *trann )
             cout << "** can't open " << trann << " **\n";
             exit(1);
         }
-        if(f.read((char *)&trec, sizeof(tdata)))
+        while(f.read((char *)&trec, sizeof(tdata)))
         {
             showtrec(trec);
             if(found(trec.acct, p)) updatrec(p, trec.tran);
