@@ -168,7 +168,7 @@ prefix( mdata & mrec )
         p->blink = nill;
         p->flink = head;
         if(head == nill) tail = p;
-        else head->blink = p;
+        else .head->blink = p;
         head = p;
 }
 void
